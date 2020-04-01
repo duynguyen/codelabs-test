@@ -223,13 +223,19 @@
 <script>
   (async () => {
     let isLarge = window.innerWidth < 768;
-    window.addEventListener('resize', () => {
-      isLarge = window.innerWidth < 768;
-
+    const toggleLarge = () => {
       document.body.classList.toggle('coral--large', isLarge);
       if (viewer.contentDocument) {
         viewer.contentDocument.body.classList.toggle('coral--large', isLarge);
       }
+    };
+
+    toggleLarge();
+
+    window.addEventListener('resize', () => {
+      isLarge = window.innerWidth < 768;
+
+      toggleLarge();
     });
 
     let isDark;
