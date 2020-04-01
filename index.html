@@ -17,6 +17,21 @@
       overflow: hidden;
     }
 
+    body {
+      opacity: 0;
+      transition: opacity ease-in-out 300ms;
+    }
+
+    body.is-ready {
+      opacity: 1;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      html, body {
+        background-color: rgb(30, 30, 30);
+      }
+    }
+
     #sideNav {
       height: 100%;
       width: 256px;
@@ -234,6 +249,8 @@
 
     navToggleAction.addEventListener('click', toggleSideNav);
     navToggleOverlay.addEventListener('click', toggleSideNav);
+
+    document.body.classList.add('is-ready');
 
     const getIndex = async () => {
       const manifest = await fetch('/manifest.json');
