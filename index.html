@@ -62,6 +62,10 @@
       overflow-y: auto;
     }
 
+    #loading {
+      z-index: 10;
+    }
+
     .logo {
       display: flex;
       align-items: center;
@@ -308,18 +312,18 @@
 
         transformLab(doc);
 
-        requestAnimationFrame(() => {
-          if (sideNav.classList.contains('is-open')) {
-            toggleSideNav();
-            navToggleAction.focus();
-          }
-        });
-
         loading.hidden = true;
         viewer.hidden = false;
       };
 
       viewer.src = menu.selectedItem.href.replace('?src=/', '');
+
+      requestAnimationFrame(() => {
+        if (sideNav.classList.contains('is-open')) {
+          toggleSideNav();
+          navToggleAction.focus();
+        }
+      });
     };
 
     const transformLab = (doc) => {
