@@ -16,7 +16,11 @@ The template codelab is based on the Project Helix https://www.project-helix.io/
 
 You can visit https://[REPO_NAME]-[REPO_OWNER].project-helix.page to see it running. 
 
-Make sure to push your changes before sharing the URL.  
+Make sure to push your changes before sharing the URL.
+
+## Contribute to Adobe I/O CodeLabs
+
+Once your codelab is ready, submit a PR to add it to the index at https://github.com/AdobeDocs/adobeio-codelabs/blob/gh-pages/actions/index.json  
 
 
 
