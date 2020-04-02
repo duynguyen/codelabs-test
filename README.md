@@ -10,7 +10,7 @@ The codelab entry point is the [README](README.md). You can put your codelab con
 
 The template codelab is based on the Project Helix https://www.project-helix.io/. Follow instructions as explained.
 
-`npm i -g @adobe/helix-cli && hlx up` is enough to get you started. 
+`npm i -g @adobe/helix-cli && hlx up` is enough to get you started. Make sure to have at least `npm@6.14.x` installed. 
 
 ## Share codelab URL
 
