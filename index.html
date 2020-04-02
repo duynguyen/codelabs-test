@@ -426,7 +426,7 @@
         </ul>
       `;
       footer.classList.add('footer');
-    }
+    };
 
     const lab404 = () => {
       document.body.insertAdjacentHTML('beforeend', `
@@ -442,7 +442,7 @@
       document.body.lastElementChild.addEventListener('coral-overlay:close', () => {
           window.location = '../';
       });
-    }
+    };
 
     window.onpopstate = (event) => {
       const step = menu.items.getAll().find(item => item.href === event.state.href);
